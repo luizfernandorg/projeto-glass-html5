@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="interface">
+
+      <header id="cabecalho">
+        <hgroup>
+          <h1>Google Glass</h1>
+          <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+
+        <img id="icone" src="_imagens/contato.png" alt="Oculos Google Glass preto pequeno"/>
+
+        <nav id="menu">
+          <h1>Menu Principal</h1>
+          <ul id="lista_menus_faleconosco" class="mainMenu">
+            <li id="link_principal"><a href="index.html" title="Página principal">Home</a></li>
+            <li id="link_spec"><a href="specs.html" title="Especificações">Especificações</a></li>
+            <li id="link_foto"><a href="fotos.html" title="Fotos">Fotos</a></li>
+            <li id="link_multimidia"><a href="multimidia.html" title="Multimídia">Multimídia</a></li>
+            <li id="link_fale_conosco"><a href="fale-conosco.html" title="Fale conosco">Fale conosco</a></li>
+          </ul>
+        </nav>
+      </header>
+      <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+          <hgroup>
+            <h3>Fale Conosco > Contato</h3>
+            <h1>Formulário de Contato</h1>
+            <h2>por Gustavo Guanabara</h2>
+            <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+          </hgroup>
+        </header>
+      </article>
+      <form id="fContato" action="mailto:nandorghack2@gmail.com" method="post">
+
+        <fieldset id="usuario">
+          <legend>Identificação do Usuário</legend>
+            <p><label for="cNome">Nome:</label><input type="text" id="cNome" name="tNome" value="" size="20" maxlength="30" placeholder="Digite seu nome"/></p>
+            <p><label for="cSenha">Senha:</label><input type="password" id="cSenha" name="tSenha" value="" size='8' maxlength="8" placeholder="8 dígitos"/></p>
+            <p><label for="cMail">E-mail:</label><input type="email" id="cMail" name="tMail" value="" size="20" maxlength="40" placeholder="seu@email.com"/></p>
+            <fieldset id="sexo">
+              <legend>Sexo:</legend>
+                <input type="radio" name="tSexo" id="cMasc" value="masculino" checked/><label for="cMasc">Masculino</label><br/>
+                <input type="radio" name="tSexo" id="cFem" value="feminino"/><label for="cFem">Feminino</label>
+            </fieldset>
+            <p><label for="cNasc">Data de Nascimento:</label><input type="date" name="tNasc" id="cNasc" value=""></p>
+        </fieldset>
+        <fieldset id="endereco">
+          <legend>Endereço do Usuário</legend>
+            <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av.,Trav., ..." value=""></p>
+            <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="999999" value=""></p>
+            <p><label for="cEst">Estado:</label>
+              <select id="cEst" name="tEst">
+                <optgroup label="Região Sudeste">
+                  <option value="SP">São Paulo</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="ES">Espírito Santo</option>
+                </optgroup>
+                <optgroup label="Região Sul">
+                  <option value="PR">Paraná</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                </optgroup>
+                <optgroup label="Região Centro-Oeste">
+                  <option value="DF">Distrito Federal</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MT">Mato Grosso</option>
+                </optgroup>
+              </select>
+            </p>
+            <p><label for="cCid">Cidade:</label>
+              <input type="text" name="tCid" id="cCid" value="" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"/>
+              <datalist id="cidades" >
+                <option value="Porto Alegre"></option>
+                <option value="Viamão"></option>
+                <option value="Alvorada"></option>
+              </datalist>
+            </p>
+        </fieldset>
+        <fieldset id="mensagem">
+          <legend>Mensagem do Usuário</legend>
+            <p><label for="cUrg">Grau de Urgência:</label>
+              Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2" value=""/>Máx</p>
+            <p><label for="cMsg">Mensagem:</label>
+              <textarea name="tMsg" id="cMsg" rows="5" cols="45" placeholder="Digite sua mensagem aqui"></textarea></p>
+        </fieldset>
+        <fieldset id="pedido">
+          <legend>Quero um Google Glass</legend>
+            <p><input type="checkbox" name="tPed" id="cPed" value="cPed" checked><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+            <p><label for="cCor">Cor:</label> <input type="color" name="tCor" id="cCor" value="#0000FF"/></p>
+            <p><label for="cQtd">Quantidade:</label> <input type="number" name="tQtd" id="cQtd" min="0" max="999999" value=""/></p>
+            <p><label for="cTot">Preço Total:</label> R$ <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" value="" readonly/></p>
+        </fieldset>
+
+        <button type="submit" name="cEnv"/>Enviar</button>
+        <a href="#" id="bEnviar"><img src="_imagens/botao-enviar.png" alt="Botão enviar"></a>
+      </form>
+<footer id="rodape">
+  <p>
+    Copyright 2013 - by Gustavo Guanabara
+    <br>
+    <a href="https://facebook.com/cursoemvideo" title="Facebook do Cursos em Vídeo" target="_blank">Facebook</a> |
+    <a href="https://twitter.com/cursosemvideo" title="Twitter do Cursos em Vídeo" target="_blank">Twitter</a>
+  </p>
+</footer>
+</div>
+<script src="_javascript/funcoes.js"></script>
+</body>
+</html>
