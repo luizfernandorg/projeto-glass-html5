@@ -1,1 +1,1 @@
-# This repository show my practice with HTML5, Css3 and Javascript
+# This is a project made from the course I took for HTML5 with CSS3 and Javascript
